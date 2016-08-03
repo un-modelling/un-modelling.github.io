@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="966c8e2d-14dd-48aa-b17b-f89e5b7d2cb7" name="Default" comment="added stylesheet.css">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="UN-DESA-Modelling.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3798">
-              <caret line="775" column="171" selection-start-line="775" selection-start-column="171" selection-end-line="775" selection-end-column="171" />
+            <state relative-caret-position="386">
+              <caret line="883" column="23" selection-start-line="883" selection-start-column="23" selection-end-line="883" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -68,11 +68,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/stylesheet.css" />
         <option value="$PROJECT_DIR$/normalize.css" />
         <option value="$PROJECT_DIR$/github-light.css" />
         <option value="$PROJECT_DIR$/stylesheets/stylesheet.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -167,12 +167,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1470250827667</updated>
-      <workItem from="1470250828943" duration="1671000" />
+      <workItem from="1470250828943" duration="1774000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1671000" />
+    <option name="totallyTimeSpent" value="1774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="85" width="1721" height="893" extended-state="0" />
@@ -251,8 +251,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3798">
-          <caret line="775" column="171" selection-start-line="775" selection-start-column="171" selection-end-line="775" selection-end-column="171" />
+        <state relative-caret-position="386">
+          <caret line="883" column="23" selection-start-line="883" selection-start-column="23" selection-end-line="883" selection-end-column="23" />
           <folding />
         </state>
       </provider>
