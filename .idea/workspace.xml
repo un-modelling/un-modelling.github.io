@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="966c8e2d-14dd-48aa-b17b-f89e5b7d2cb7" name="Default" comment="added stylesheet.css">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-    </list>
+    <list default="true" id="966c8e2d-14dd-48aa-b17b-f89e5b7d2cb7" name="Default" comment="added stylesheet.css" />
     <ignored path="UN-DESA-Modelling.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -199,15 +197,15 @@
       <updated>1470250827667</updated>
       <workItem from="1470250828943" duration="1841000" />
       <workItem from="1470330242060" duration="62000" />
-      <workItem from="1470330468122" duration="3673000" />
+      <workItem from="1470330468122" duration="3698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5576000" />
+    <option name="totallyTimeSpent" value="5601000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="143" y="62" width="1721" height="893" extended-state="0" />
+    <frame x="143" y="62" width="1721" height="893" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14193548" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
