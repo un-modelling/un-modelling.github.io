@@ -35,8 +35,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="635">
-              <caret line="931" column="161" selection-start-line="931" selection-start-column="161" selection-end-line="931" selection-end-column="161" />
+            <state relative-caret-position="569">
+              <caret line="1343" column="156" selection-start-line="1343" selection-start-column="156" selection-end-line="1343" selection-end-column="156" />
               <folding>
                 <element signature="n#script#15;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#7885#8219#0" expanded="false" />
@@ -233,12 +233,12 @@
       <workItem from="1473631705387" duration="662000" />
       <workItem from="1473653650542" duration="355000" />
       <workItem from="1473894800786" duration="208000" />
-      <workItem from="1477007548467" duration="473000" />
+      <workItem from="1477007548467" duration="576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14421000" />
+    <option name="totallyTimeSpent" value="14524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
@@ -674,8 +674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="635">
-          <caret line="931" column="161" selection-start-line="931" selection-start-column="161" selection-end-line="931" selection-end-column="161" />
+        <state relative-caret-position="569">
+          <caret line="1343" column="156" selection-start-line="1343" selection-start-column="156" selection-end-line="1343" selection-end-column="156" />
           <folding>
             <element signature="n#script#15;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#7885#8219#0" expanded="false" />
