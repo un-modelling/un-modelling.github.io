@@ -1,0 +1,9 @@
+nav {
+  display: flex;
+  background-color: #141414;
+  font-size: 1em;
+  clear: both;
+  height: 4em;
+  line-height: 4em;
+  width: 100%;
+}

@@ -1,0 +1,79 @@
+#selection-modal form,
+#graphs-modal form {
+  text-align: center;
+}
+
+.selector {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  margin: 0 1em;
+}
+
+label {
+  display: inline-block;
+}
+
+svg.radio-blank,
+svg.radio-marked,
+svg.checkbox-blank,
+svg.checkbox-marked {
+  display: none;
+  clear: none;
+  vertical-align: bottom;
+}
+
+#graphs-modal label,
+#selection-modal label {
+  margin-left: 12px;
+}
+
+#graphs-modal input,
+#selection-modal input {
+  display: none;
+  clear: none;
+}
+
+#selection-modal-form {
+  display: flex;
+}
+
+#selection-modal-form div {
+  padding: 5px;
+}
+
+#selection-modal-form > div:nth-child(2) {
+  border-left: 1px solid #ccc;
+}
+
+input[type="radio"]:not(:checked)    + label svg.radio-blank,
+input[type="checkbox"]:not(:checked) + label svg.checkbox-blank {
+  display: inline-block;
+}
+
+input[type="radio"]:checked    ~ label svg.radio-marked,
+input[type="checkbox"]:checked ~ label svg.checkbox-marked {
+  display: inline-block;
+}
+
+.checkbox-selector {
+  text-align: right;
+}
+
+.checkbox-caret *,
+.checkbox-selector * {
+  cursor: pointer !important;
+}
+
+li.selector.warning {
+  border: 1px solid red;
+  border-radius: 2px;
+}
+
+.span-warning,
+li.selector.warning::after {
+  color: red;
+  clear: both;
+  display: block;
+  padding: 0.5em;
+}

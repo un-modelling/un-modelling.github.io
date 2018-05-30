@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="640">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+    <title>UN Modelling Tools</title>
+  </head>
+
+  <body>
+    <header>
+  <a id="title" href="/">
+    Modelling&nbsp;Tools
+    <br>
+    <div id="for-sustainable-development">for&nbsp;sustainable&nbsp;development</div>
+  </a>
+
+  <div id="logos">
+    <a href="http://www.undp.org/">
+      <img src="/images/logos/undp.svg"
+           alt="UNDP Logo">
+    </a>
+    <a href="https://www.un.org/development/desa/en/">
+      <img src="/images/logos/undesa.png"
+           alt="UNDESA Logo">
+    </a>
+  </div>
+</header>
+
+
+    <nav>
+  <input id="toggle"
+         class="no-desktop"
+         type="checkbox">
+
+  <div class="no-desktop">
+    <label for="toggle">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+        <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </svg>
+    </label>
+  </div>
+
+  <a href="/about"
+     class="toggleable">About</a>
+
+  <a href="/modelling-tools"
+     class="toggleable">Modelling Tools</a>
+
+  <a href="/country-projects"
+     class="toggleable">Country Projects</a>
+
+  <a href="/outreach-training"
+     class="toggleable">Outreach Training</a>
+
+  <a href="/news-events"
+     class="toggleable">News and Events</a>
+
+  <script>
+    (function() {
+    var as = document.querySelectorAll('body > nav a');
+    var path = location.pathname;
+
+    for (var a of as) {
+      var regex = new RegExp(`${a.pathname}`);
+
+      if (!a.href.match('#') && path.match(regex)) {
+        a.classList.add('active');
+        break;
+      }
+    }})();
+  </script>
+</nav>
+
+
+    <main>
+<!-- CONTENT-STARTS -->
+<script src="/lib/location.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/tada/stylesheets/main.css" />
+<link rel="stylesheet" type="text/css" href="/tada/stylesheets/graphs.css" />
+<link rel="stylesheet" type="text/css" href="/tada/stylesheets/selection.css" />
+<link rel="stylesheet" type="text/css" href="/tada/stylesheets/un.css" />
+
+<div id="tables-picker" class="screen">
+  <form>
+    <h3>Data</h3>
+    <input id="data-input-file" type="file" autocomplete="off" required></input>
+
+    <h3>Dictionary</h3>
+    <input id="dict-input-file" type="file" autocomplete="off" required></input>
+
+    <hr />
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <ul id="diagnostics"></ul>
+</div>
+
+<div id="parameters-picker" class="screen">
+  <form></form>
+</div>
+
+<div id="graphs" class="screen">
+  <div id="selection-modal"
+       class="modal">
+    <div class="modal-content">
+      <a class="modal-close-button"
+         onclick="ui_close_modal(this);"></a>
+
+      <form id="selection-modal-form">
+        <div id="reference-selection">
+          <h3 class="in-compare-mode">Reference</h3>
+          <ul id="reference-selectors-list"></ul>
+        </div>
+
+        <div id="alternative-selection" class="in-compare-mode">
+          <h3 class="in-compare-mode">Alternative</h3>
+          <ul id="alternative-selectors-list"></ul>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="graphs-modal"
+       class="modal">
+    <div class="modal-content">
+      <a class="modal-close-button"
+         onclick="ui_close_modal(this);"></a>
+
+      <form id="graphs-modal-form">
+        <ul id="graphs-list"></ul>
+      </form>
+    </div>
+  </div>
+
+  <div id="preferences-modal"
+       class="modal">
+    <div class="modal-content">
+      <h3>Preferences</h3>
+      <a class="modal-close-button"
+         onclick="ui_close_modal(this);"></a>
+
+      <strong>Application's title:</strong> <input id="preferences-title" type="text"></input>
+    </div>
+  </div>
+
+  <div id="title-bar" style="display: none;">
+    <span id="logo"></span>
+    <input id="title" value="Table Analyser" autocomplete="off">
+  </div>
+
+  <div id="content">
+    <div id="sidebar">
+      <ul>
+        <li class="nav-button"
+            onclick="modal_show('graphs')">Graphs</li>
+
+        <li class="nav-button"
+            onclick="modal_show('selection')">Query</li>
+
+        <li class="nav-button"
+            onclick="ui_toggle_compare_mode(); modal_show('selection')">Compare</li>
+      </ul>
+    </div>
+
+    <div id="panes-container">
+      <div id="reference-column" class="reference-scope">
+        <h4 class="in-compare-mode column-title">Reference</h4>
+        <div id="reference-svgs" class="svgs-container"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<template bind="li-data-diagnostic">
+  <li>
+    <strong>{0}</strong>
+    <pre>{1}</pre>
+  <li>
+</template>
+
+<template bind="li-dictionary-diagnostic">
+  <li>
+    <strong>On row {0}:</strong>
+    <pre>{1}</pre>
+  </li>
+</template>
+
+<template bind="li-selector">
+  <li id="{0}-{1}-selector" class="selector" bind="{1}">
+    <h4>{2}</h4>
+  </li>
+</template>
+
+<template bind="checkbox-caret">
+  <div class="checkbox-caret">
+    <input id="{3}-{1}" name="{3}" type="{4}" bind="{0}" value="{1}">
+    <label for="{3}-{1}" style="vertical-align: middle;">
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="checkbox-blank">
+        <path fill="#4d4d4d" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+      </svg>
+
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24"  class="checkbox-marked">
+        <path fill="#4d4d4d" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+      </svg>
+    </label>
+    <label for="{3}-{1}"><strong>{2}</strong></label>
+  </div>
+</template>
+
+<template bind="checkbox-selector">
+  <div class="checkbox-selector">
+    <label for="{3}-{1}">{2}</label>
+    <input id="{3}-{1}" name="{3}" type="{4}" class="value-selector" bind="{0}" value="{1}">
+    <label for="{3}-{1}" style="vertical-align: middle;">
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="checkbox-blank">
+        <path fill="#4d4d4d" d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z" />
+      </svg>
+
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="checkbox-marked">
+        <path fill="#4d4d4d" d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z" />
+      </svg>
+
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="radio-blank">
+        <path fill="#4d4d4d" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+      </svg>
+
+      <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="radio-marked" for="{3}-{1}">
+        <path fill="#4d4d4d" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z" />
+      </svg>
+    </label>
+  </div>
+</template>
+
+<template bind="scope-column">
+  <div id="{0}-column" class="{0}-scope">
+    <h4 class="in-compare-mode column-title">{1}</h4>
+    <div id="{0}-svgs" class="svgs-container"></div>
+  </div>
+</template>
+
+<template bind="close-icon">
+  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#ffffff" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+  </svg>
+</template>
+
+<template bind="image-icon">
+  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#ffffff" d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+  </svg>
+</template>
+
+<template bind="download-icon">
+  <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    <path fill="#ffffff" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+  </svg>
+</template>
+
+
+<!--
+    !-- <script src="/lib/location.js"></script>
+    !--
+    !-- <link rel="stylesheet" type="text/css" href="/stylesheets/tada/main.css" />
+    !-- <link rel="stylesheet" type="text/css" href="/stylesheets/tada/graphs.css" />
+    !-- <link rel="stylesheet" type="text/css" href="/stylesheets/tada/selection.css" />
+    !--
+    !-- <style>
+    !--   main { width: 100% !important; }
+    !-- </style>
+    !--
+    !-- <div id="tables-picker" class="screen" style="display:none;">
+    !--   <form>
+    !--     <h3>Data</h3>
+    !--     <input id="data-input-file" type="file" required></input>
+    !--
+    !--     <h3>Dictionary</h3>
+    !--     <input id="dict-input-file" type="file" required></input>
+    !--
+    !--     <hr />
+    !--
+    !--     <input type="submit" value="Submit">
+    !--   </form>
+    !--
+    !--   <ul id="diagnostics"></ul>
+    !-- </div>
+    !--
+    !-- <div id="parameters-picker" class="screen" style="display:none;">
+    !--   <form></form>
+    !-- </div>
+    !--
+    !-- <div id="graphs" class="screen">
+    !--   <div id="graphs-modal"
+    !--        class="modal">
+    !--     <div class="modal-content">
+    !--       <h4>Select graphs</h4>
+    !--       <a class="modal-close-button">&nbsp;</a>
+    !--
+    !--       <form id="graphs-modal-form">
+    !--         <ul id="graphs-list"></ul>
+    !--       </form>
+    !--     </div>
+    !--   </div>
+    !--
+    !--   <div id="selection-modal"
+    !--        class="modal">
+    !--     <div class="modal-content">
+    !--       <h4>Select your query parameters</h4>
+    !--       <a class="modal-close-button"></a>
+    !--
+    !--       <form id="selection-modal-form">
+    !--         <div id="reference-selection">
+    !--           <h3 class="in-compare-mode">Reference</h3>
+    !--           <ul id="reference-selectors-list"></ul>
+    !--         </div>
+    !--
+    !--         <div id="alternative-selection" class="in-compare-mode">
+    !--           <h3 class="in-compare-mode">Alternative</h3>
+    !--           <ul id="alternative-selectors-list"></ul>
+    !--         </div>
+    !--       </form>
+    !--     </div>
+    !--   </div>
+    !--
+    !--   <div id="preferences-modal"
+    !--        class="modal">
+    !--     <div class="modal-content">
+    !--       <h3>Preferences</h3>
+    !--       <a class="modal-close-button"></a>
+    !--
+    !--       <strong>Application's title:</strong> <input id="preferences-title" type="text"></input>
+    !--     </div>
+    !--   </div>
+    !--
+    !--   <div id="title-bar">
+    !--     <span id="logo"></span>
+    !--     <h1 id="title">Table Analyser</h1>
+    !--   </div>
+    !--
+    !--   <div id="content">
+    !--     <nav id="sidebar">
+    !--       <ul>
+    !--         <li class="nav-button"
+    !--             onclick="$('#graphs-modal').show()">Graphs</li>
+    !--
+    !--         <li class="nav-button"
+    !--             onclick="$('#selection-modal').show()">Query</li>
+    !--
+    !--         <li class="nav-button"
+    !--             onclick="ui_toggle_compare_mode(); $('#selection-modal').show()">Compare</li>
+    !--       </ul>
+    !--     </nav>
+    !--
+    !--     <div id="panes-container">
+    !--       <span>
+    !--         <div id="reference-column" class="reference-scope">
+    !--           <h4 class="in-compare-mode column-title">Reference</h4>
+    !--           <ul id="reference-svgs" class="svgs-container"></ul>
+    !--         </div>
+    !--       </span>
+    !--     </div>
+    !--   </div>
+    !-- </div>
+    !--
+    !-- <template bind="li-data-diagnostic">
+    !--   <strong>{0}</strong>
+    !--   <pre>{1}</pre>
+    !-- </template>
+    !--
+    !-- <template bind="li-dictionary-diagnostic">
+    !--   <strong>On row {0}:</strong>
+    !--   <pre>{1}</pre>
+    !-- </template>
+    !--
+    !-- <template bind="li-selector">
+    !--   <li id="{0}-{1}-selector" class="selector" bind="{1}">
+    !--     <h5>{2}</h5>
+    !--   </li>
+    !-- </template>
+    !--
+    !-- <template bind="checkbox-selector">
+    !--   <div style="clear: both; float: left;">
+    !--     <label for="{3}-{1}">{2}</label>
+    !--     <input id="{3}-{1}" name="{3}" type="{4}" class="value-selector" bind="{0}" value="{1}">
+    !--
+    !--     <label for="{3}-{1}" style="vertical-align: middle;">
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="checkbox-blank">
+    !--         <path fill="#4d4d4d" d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z" />
+    !--       </svg>
+    !--
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="checkbox-marked">
+    !--         <path fill="#4d4d4d" d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z" />
+    !--       </svg>
+    !--
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="radio-blank">
+    !--         <path fill="#4d4d4d" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+    !--       </svg>
+    !--
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="radio-marked" for="{3}-{1}">
+    !--         <path fill="#4d4d4d" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z" />
+    !--       </svg>
+    !--     </label>
+    !--   </div>
+    !-- </template>
+    !--
+    !-- <template bind="scope-column">
+    !--   <div id="{0}-column" class="{0}-scope">
+    !--     <h4 class="in-compare-mode column-title">{1}</h4>
+    !--     <ul id="{0}-svgs" class="svgs-container"></ul>
+    !--   </div>
+    !-- </template>
+    !--
+    !-- <template bind="close-icon">
+    !--   <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    !--     <path fill="#ffffff" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+    !--   </svg>
+    !-- </template>
+    !--
+    !-- <template bind="image-icon">
+    !--   <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    !--     <path fill="#ffffff" d="M8.5,13.5L11,16.5L14.5,12L19,18H5M21,19V5C21,3.89 20.1,3 19,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19Z" />
+    !--   </svg>
+    !-- </template>
+    !--
+    !-- <template bind="download-icon">
+    !--   <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    !--     <path fill="#ffffff" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+    !--   </svg>
+    !-- </template>
+    !--
+    !-- <template bind="checkbox-caret">
+    !--   <div class="checkbox-caret">
+    !--     <input id="{3}-{1}" name="{3}" type="{4}" bind="{0}" value="{1}">
+    !--     <label for="{3}-{1}" style="vertical-align: middle;">
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="checkbox-blank">
+    !--         <path fill="#4d4d4d" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+    !--       </svg>
+    !--
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24"  class="checkbox-marked">
+    !--         <path fill="#4d4d4d" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+    !--       </svg>
+    !--     </label>
+    !--     <label for="{3}-{1}"><strong>{2}</strong></label>
+    !--   </div>
+    !-- </template>
+    !--
+    !-- <template bind="checkbox-selector">
+    !--   <div class="checkbox-selector">
+    !--     <label for="{3}-{1}">{2}</label>
+    !--     <input id="{3}-{1}" name="{3}" type="{4}" class="value-selector" bind="{0}" value="{1}">
+    !--     <label for="{3}-{1}" style="vertical-align: middle;">
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="checkbox-blank">
+    !--         <path fill="#4d4d4d" d="M19,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19Z" />
+    !--       </svg>
+    !--
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="checkbox-marked">
+    !--         <path fill="#4d4d4d" d="M19,19H5V5H15V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V11H19M7.91,10.08L6.5,11.5L11,16L21,6L19.59,4.58L11,13.17L7.91,10.08Z" />
+    !--       </svg>
+    !--
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="radio-blank">
+    !--         <path fill="#4d4d4d" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" />
+    !--       </svg>
+    !--
+    !--       <svg style="width:24px;height:24px" viewBox="0 0 24 24" class="radio-marked" for="{3}-{1}">
+    !--         <path fill="#4d4d4d" d="M12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,7A5,5 0 0,0 7,12A5,5 0 0,0 12,17A5,5 0 0,0 17,12A5,5 0 0,0 12,7Z" />
+    !--       </svg>
+    !--     </label>
+    !--   </div>
+    !-- </template>
+    !--
+    !-- <script data-main="/javascripts/tada"
+    !--         src="/lib/require.js"></script>
+  -->
+
+<script data-main="/tada/main.js"
+        src="/lib/require.js"></script>
+
+<!-- CONTENT-ENDS -->
+    </main>
+
+    <footer>
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+  </div>
+
+  <div class="t-col">
+    <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+  </div>
+
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+  </div>
+
+  <div class="t-col">
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+  </body>
+</html>

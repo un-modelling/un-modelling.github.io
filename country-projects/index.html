@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="640">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+    <title>UN Modelling Tools</title>
+  </head>
+
+  <body>
+    <header>
+  <a id="title" href="/">
+    Modelling&nbsp;Tools
+    <br>
+    <div id="for-sustainable-development">for&nbsp;sustainable&nbsp;development</div>
+  </a>
+
+  <div id="logos">
+    <a href="http://www.undp.org/">
+      <img src="/images/logos/undp.svg"
+           alt="UNDP Logo">
+    </a>
+    <a href="https://www.un.org/development/desa/en/">
+      <img src="/images/logos/undesa.png"
+           alt="UNDESA Logo">
+    </a>
+  </div>
+</header>
+
+
+    <nav>
+  <input id="toggle"
+         class="no-desktop"
+         type="checkbox">
+
+  <div class="no-desktop">
+    <label for="toggle">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+        <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </svg>
+    </label>
+  </div>
+
+  <a href="/about"
+     class="toggleable">About</a>
+
+  <a href="/modelling-tools"
+     class="toggleable">Modelling Tools</a>
+
+  <a href="/country-projects"
+     class="toggleable">Country Projects</a>
+
+  <a href="/outreach-training"
+     class="toggleable">Outreach Training</a>
+
+  <a href="/news-events"
+     class="toggleable">News and Events</a>
+
+  <script>
+    (function() {
+    var as = document.querySelectorAll('body > nav a');
+    var path = location.pathname;
+
+    for (var a of as) {
+      var regex = new RegExp(`${a.pathname}`);
+
+      if (!a.href.match('#') && path.match(regex)) {
+        a.classList.add('active');
+        break;
+      }
+    }})();
+  </script>
+</nav>
+
+
+    <main>
+<!-- CONTENT-STARTS -->
+<link rel="stylesheet" href="/stylesheets/country-projects.css">
+
+<section class="banner"
+         style="background-image: url(/images/photos/electricity-hill.jpg);
+                min-height: 500px;">
+</section>
+
+<section>
+  <h1>Strengthening National Capacities</h1>
+
+  <p>In supporting countries to devise policies for achieving sustainable development, UNDESA and UNDP help build models to answer key policy questions, enhance capacities to run and interpret modelling scenarios, and strengthen skills to communicate key results.</p>
+
+  All country projects:
+    <ul>
+      <li>Are demand driven, implemented at government request and in close communication with officials based on specific national needs and interests</li>
+      <li>Last between 6 to 24 months, depending on the complexity of the models, data availability, existing technical capacities and institutional dynamics</li>
+      <li>Require strong collaboration with government counterparts and the establishment of an inter-institutional technical modelling team where diverse institutions pool expertise</li>
+    </ul>
+  </p>
+</section>
+
+<section id="countries">
+  <h1>Countries</h1>
+
+  <br>
+
+  <div id="flags">
+    <a href="/country-projects/bolivia"
+       class="flag">
+      <img src="/lib/flags/bolivia.svg">
+      Bolivia
+    </a>
+
+    <a href="/country-projects/costa-rica"
+         class="flag">
+      <img src="/lib/flags/costa-rica.svg">
+      Costa Rica
+    </a>
+
+    <a href="/country-projects/ghana"
+         class="flag">
+      <img src="/lib/flags/ghana.svg">
+      Ghana
+    </a>
+
+    <a href="/country-projects/mexico"
+         class="flag" >
+      <img src="/lib/flags/mexico.svg">
+      Mexico
+    </a>
+
+    <a href="/country-projects/kyrgyz-republic"
+         class="flag">
+      <img src="/lib/flags/kyrgyz-republic.svg">
+      Kyrgyz Republic
+    </a>
+
+    <a href="/country-projects/paraguay"
+         class="flag">
+      <img src="/lib/flags/paraguay.svg">
+      Paraguay
+    </a>
+
+    <a href="/country-projects/mongolia"
+         class="flag">
+      <img src="/lib/flags/mongolia.svg">
+      Mongolia
+    </a>
+
+    <a href="/country-projects/uganda"
+         class="flag">
+      <img src="/lib/flags/uganda.svg">
+      Uganda
+    </a>
+
+    <a href="/country-projects/vietnam"
+         class="flag">
+      <img src="/lib/flags/vietnam.svg">
+      Vietnam
+    </a>
+  </div>
+</section>
+
+<!-- CONTENT-ENDS -->
+    </main>
+
+    <footer>
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+  </div>
+
+  <div class="t-col">
+    <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+  </div>
+
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+  </div>
+
+  <div class="t-col">
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+  </body>
+</html>

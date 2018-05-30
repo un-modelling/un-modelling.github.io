@@ -1,0 +1,33 @@
+#partners {
+  display: flex;
+  flex-flow: row wrap;
+	/* text-align: center; */
+	justify-content: center;
+}
+
+.partner {
+  padding: 1em;
+  flex: 1 calc(50% - 2em);
+  border: 1px solid rgb(0,0,0,0);
+  cursor: pointer;
+
+  text-align: center;
+  vertical-align: bottom;
+  align-items: baseline;
+}
+
+.partner:hover {
+  border: 1px solid lightgray;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.partner img {
+  width: auto;
+  height: 256px;
+}
+
+@media (max-width: 1000px) {
+  .partner {
+    width: 100%;
+  }
+}

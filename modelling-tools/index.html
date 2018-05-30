@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="640">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+    <title>UN Modelling Tools</title>
+  </head>
+
+  <body>
+    <header>
+  <a id="title" href="/">
+    Modelling&nbsp;Tools
+    <br>
+    <div id="for-sustainable-development">for&nbsp;sustainable&nbsp;development</div>
+  </a>
+
+  <div id="logos">
+    <a href="http://www.undp.org/">
+      <img src="/images/logos/undp.svg"
+           alt="UNDP Logo">
+    </a>
+    <a href="https://www.un.org/development/desa/en/">
+      <img src="/images/logos/undesa.png"
+           alt="UNDESA Logo">
+    </a>
+  </div>
+</header>
+
+
+    <nav>
+  <input id="toggle"
+         class="no-desktop"
+         type="checkbox">
+
+  <div class="no-desktop">
+    <label for="toggle">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+        <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </svg>
+    </label>
+  </div>
+
+  <a href="/about"
+     class="toggleable">About</a>
+
+  <a href="/modelling-tools"
+     class="toggleable">Modelling Tools</a>
+
+  <a href="/country-projects"
+     class="toggleable">Country Projects</a>
+
+  <a href="/outreach-training"
+     class="toggleable">Outreach Training</a>
+
+  <a href="/news-events"
+     class="toggleable">News and Events</a>
+
+  <script>
+    (function() {
+    var as = document.querySelectorAll('body > nav a');
+    var path = location.pathname;
+
+    for (var a of as) {
+      var regex = new RegExp(`${a.pathname}`);
+
+      if (!a.href.match('#') && path.match(regex)) {
+        a.classList.add('active');
+        break;
+      }
+    }})();
+  </script>
+</nav>
+
+
+    <main>
+<!-- CONTENT-STARTS -->
+<link rel="stylesheet" href="/stylesheets/modelling-tools.css">
+
+<nav class="no-mobile">
+  <a href="#clews">CLEWS</a>
+  <a href="#economy-models">Economy-wide Models</a>
+  <a href="#socioeconomic">Socioeconomic</a>
+  <a href="#energy-systems">Energy Systems</a>
+  <a href="#geo-electricity">Geo-spatial Electrification</a>
+</nav>
+
+<section class="banner"
+         style="background-image: url(/images/photos/beans.jpg);
+                margin-top: 0em;
+                margin-bottom: 2em;
+                min-height: 500px;">
+</section>
+
+<section>
+  <h1>Modelling Tools for Sustainable Development</h1>
+
+  <p>Five quantitative modelling tools are being used by UNDESA and UNDP to help countries assess sustainable development policy options.</p>
+
+  <ul>
+    <li>The Climate, Land-use, Energy and Water Systems analysis and model (CLEWS)</li>
+    <li>Economy-wide models</li>
+    <li>Socioeconomic microsimulations</li>
+    <li>Energy systems models</li>
+    <li>Geo-spatial electrification access modelling</li>
+  </ul>
+
+  <p>The tools use, to the extent possible, open source software and state-of-the-art knowledge. Continuous development and improvement, backed by a global community of experts, spurs innovation and overcomes challenges.</p>
+</section>
+
+<section id="clews">
+  <h1>The Climate, Land-use, Energy and Water systems (CLEWS)</h1>
+
+  <p>Climate, land-use, energy and water systems (CLEWS) models are tools for simultaneous consideration of food, energy and water security. They are designed to assess how production and use of these resources may contribute to climate change, and how climate change may affect resource systems.</p>
+
+  <p>By comparing different technologies and value chains, the model can identify pressure points, and indicate synergies and trade-offs to reach development goals. CLEWS can analyse policy decisions on issues such as the promotion of clean energy, competition for water and agricultural modernization.</p>
+
+  <div class="projects">
+    <div class="t-col" style="background-image: url(/images/photos/clews-mauritius.jpg)">
+      <div class="fuzz"></div>
+      <h3>CLEWS Mauritius</h3>
+
+      <div class="t-gutter">
+        <a href="https://un-desa-modelling.github.io/clews-mauritius-presentation">Visualisation</a>
+      </div>
+    </div>
+
+    <div class="t-col" style="background-image: url(/images/photos/fields.jpg)">
+      <div class="fuzz"></div>
+      <h3>CLEWS Global</h3>
+
+      <div class="t-gutter">
+        <a href="https://unite.un.org/sites/unite.un.org/files/app-globalclews-v-1-0/landingpage.html">Visualisation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="economy-models">
+  <h1>Economy-wide models</h1>
+
+  <p>Economy-wide models are useful to assess “what-if” scenarios involving a variety of policies and shocks. They can shed light on the impacts of policies and shocks on employment, output, national budgets, imports and exports, and consumption patterns, among others.</p>
+
+  <p>Examples of policies assessed by the models include: increasing investments in education and health, investments in infrastructure, introduction of fuel or carbon taxes, and emissions cap regulations.</p>
+
+  <div class="projects">
+    <div class="t-col" style="background-image: url(/images/photos/tax-fuel-development.jpg)">
+      <div class="fuzz"></div>
+      <h3>Fuel Tax & Development</h3>
+
+      <div class="t-gutter">
+        <a onclick="_show_aside(this);">About</a>
+
+        <a href="https://un-desa-modelling.github.io/tax-fuel-development-presentation/">Visualisation</a>
+      </div>
+
+      <aside>
+        <div class="content">
+          <p>The fuel tax and development visualization looks into the trade-offs and synergies for sustainable development from imposing a fuel tax. Using an energy tax as a proxy, the model considers impacts that hinge on how newly generated revenue is spent or recycled back into the economy. For example, tax revenues may feed into a simple expansion of the overall government budget, or go towards expenditures in education or infrastructure investment. The illustration presents three country cases.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="socioeconomic">
+  <h1>Socioeconomic Microsimulations</h1>
+
+  <p>Understanding how households and individuals experience policy choices and potential shocks is key to ensuring that benefits are inclusive and no one is left behind. Microsimulations offer insights for policies to eradicate poverty, reduce inequality, enhance food security and broaden access to energy, among others. The technique has been applied to policies related to taxes or subsidies, cash or in-kind transfers, and expanded access to modern energy, among other examples.</p>
+
+  <div class="projects">
+    <div class="t-col" style="background-image: url(/images/photos/kids-walking.jpg)">
+      <div class="fuzz"></div>
+      <h3>Growth and Social Inclusion</h3>
+
+      <div class="t-gutter">
+        <a onclick="_show_aside(this);">About</a>
+        <a href="/tada?project=growth-social-inclusion">Visualisation</a>
+      </div>
+
+      <aside>
+        <div class="content">
+          <p>This analysis combines two modelling tools, an economy-wide model and microsimulation.
+            <ul>
+              <li>The economy-wide model analyses the effects of rapid growth and different financing options in implementing education, health and sanitation policies. Model simulations suggest that economic growth greatly facilitates the achievement of education, health and sanitation goals. The analysis also suggests, however, that in the absence of fast economic growth, the financial burden of implementing these policies increases dramatically.</li>
+              <li>The microsimulation exercise analyses the impact of macroeconomic shocks on household income, notably labour income. This generates a mapping of the effects of implementing health, education and sanitation policies on poverty and income distribution for a number of key household groups.</li>
+            </ul>
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="t-col" style="background-image: url(/images/photos/electricity-poles.jpg)">
+      <div class="fuzz"></div>
+      <h3>Estimating Electricity Consumption Using HH Surveys</h3>
+
+      <div class="t-gutter">
+        <a onclick="_show_aside(this);">About</a>
+      </div>
+
+      <aside>
+        <div class="content">
+          <ul>
+            <li>Estimating the demand for electricity is a critical step in the design of a medium- to long-term energy plan. Frequently, estimates are based on time series data with few observation points or on data from other countries or regions. Even if data exist over a number of years and for detailed energy services, estimates often cannot easily take into account changes in policies.</li>
+            <li>Microsimulation models shed light on how the demand for energy can change under “what-if” scenarios. Based on household surveys or administrative data, microsimulation can estimate energy demand for the entire distribution of households or beneficiaries, and thereby offer some evidence of how, for example, redistributive policies can affect the overall demand for energy.</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="energy-systems">
+  <h1>Energy Systems Models</h1>
+
+  <p>Energy systems models can be used for energy policy analysis or to conduct medium- and long-term energy planning. They can help assess the interplay between the technical and economic characteristics of energy technologies, and explore how technology choice impacts energy security, access and affordability, as well as the environment.</p>
+
+  <div class="projects">
+    <div class="t-col" style="background-image: url(/images/photos/integrated-systems-analysis.jpg)">
+      <div class="fuzz"></div>
+      <h3>Energy Systems Analysis</h3>
+
+      <div class="t-gutter">
+        <a onclick="_show_aside(this);">About</a>
+        <a href="https://unite.un.org/sites/unite.un.org/files/app-desa-atlantis/index.html">Visualisation</a>
+      </div>
+
+      <aside>
+        <div class="content">
+          <p>The case study was developed by KTH-dESA to illustrate the basic features of energy systems modelling by using OSeMOSYS, the open source energy modelling system, and its interface MoManI. This exercise uses data for a fictitious country, called Atlantis, that shares features of both a developing and a developed countries. The interactive visualization presents results from four scenarios: a reference business-as-usual one where the country achieves universal access to electricity by 2030; another setting a 50 per cent target of electricity generation from renewables; and a climate change scenario.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section id="geo-electricity">
+  <h1>Geo-spatial Electrification</h1>
+
+  <p>The Open Source Spatial Electrification Tool (OnSSET) uses geospatial data to determine the most cost-effective conventional and renewable energy technologies for bringing electricity to specific localities. It is designed to identify means of providing access to safe, affordable and reliable electricity to households that currently do not have it. The model compares options such as connections to the electrical grid, and mini-grid or stand-alone systems. It factors in population density, distance to transmission and road networks, renewable energy potential, fuel prices and estimated electricity consumption per household, among other considerations.</p>
+
+  <div class="projects">
+    <div class="t-col" style="background-image: url(/images/photos/solar-panel-hut.jpg)">
+      <div class="fuzz"></div>
+      <h3>Electrification Paths</h3>
+
+      <div class="t-gutter">
+        <a href="https://un-desa-modelling.github.io/electrification-paths-presentation/">Visualisation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  var _as = document.querySelectorAll('aside');
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key == "Escape")
+      _as.forEach((a) => a.style.display = 'none');
+  });
+
+  function _show_aside(it) {
+    it.closest('.t-col').querySelector('aside').style.display = 'block';
+  };
+
+  _as.forEach((a) => {
+    a.addEventListener('mousedown', function() { a.style.display = 'none'; })
+  });
+
+  window._show_aside = _show_aside;
+})();
+</script>
+
+<!-- CONTENT-ENDS -->
+    </main>
+
+    <footer>
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+  </div>
+
+  <div class="t-col">
+    <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+  </div>
+
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+  </div>
+
+  <div class="t-col">
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+  </body>
+</html>

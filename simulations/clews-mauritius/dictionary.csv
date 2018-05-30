@@ -1,0 +1,46 @@
+variable,expanded,category
+variable,Variable,
+scenario,Scenario,
+eth,Renewable Ethanol,Energy
+rps,Renewable Electricity,Electricity
+climate,Rainfall,Other
+Cummulative (2015-2030),garbage,Energy
+Base,Base,
+CC0,Historical Average,Other
+CC1,7% reduction,Other
+CC2,10% reduction,Other
+electricity_liquid,Electricity Liquid,Electricity
+sugar,Sugar production [Thousand tonnes],Other
+yield,Yield [Tonnes cane per hectare],Other
+water,Water use [Million cubic meters],Other
+water_irrigation,Water use for irrigation [Million cubic meters],Other
+emissions,CO2 emissions [Thousand tonnes],Other
+liquid_fuel,Liquid fuels imports [TJ],Energy
+coal,Coal imports [TJ],Energy
+land_use_sugarcane,Land use for sugarcane production [Thousand hectares],Other
+land_irrigated_sugarcane,Irrigated land for sugarcane production [Thousand hectares],Other
+renewables_share,Share of renewables in electricity generation [%],Energy
+ethanol,Ethanol production [TJ],Energy
+bagasse,Bagasse production [TJ],Energy
+primary_energy_1,Primary energy supply (method 1) [TJ],Energy
+domestic_energy_1,Domestic energy production (method 1) [TJ],Energy
+energy_1,Imported energy (method 1) [TJ],Energy
+primary_energy_2,Primary energy supply (method 2) [TJ],Energy
+domestic_energy_2,Domestic energy production (method 2) [TJ],Energy
+energy_2,Imported energy (method 2) [TJ],Energy
+energy_security,Energy Import Dependence [Percentage],Energy
+electricity_coal,Electricity generation from coal [GWh],Electricity
+electricity_bagasse,Electricity generation from bagasse [GWh],Electricity
+electricity_liquid_fuels,Electricity generation from liquid fuels [GWh],Electricity
+electricity_hydro,Electricity generation from hydro [GWh],Electricity
+electricity_wind,Electricity generation from Wind [GWh],Electricity
+electricity_solar,Electricity generation from Solar [GWh],Electricity
+electricity_other,Electricity generation from other renewables [GWh],Electricity
+electricity_renewables,Electricity generation from renewables [GWh],Electricity
+electricity,Alternative Electricity generation [GWh],Electricity
+reference_electricity,Reference Electricity generation [GWh],Electricity
+energy_imports,Energy imports [$ millions],Energy
+energy_imports_share_gdp,Energy imports share of GDP [%],Energy
+electricity_price,Electricity price [$/MWh],Electricity
+electricity_generation,Electricity Generation Graphs [GWh],Electricity
+electricity_generation_diff,Difference in Electricity generation [GWh],Electricity

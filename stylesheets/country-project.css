@@ -1,0 +1,17 @@
+.title {
+  display: flex;
+  vertical-align: middle;
+}
+
+.title h1 {
+  flex: 1;
+  margin: auto 1.5em;
+  width: auto;
+  text-align: center;
+}
+
+.title img {
+  flex: 0;
+  height: 150px;
+  vertical-align: middle;
+}

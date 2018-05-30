@@ -1,0 +1,29 @@
+variable,expanded,category
+scn,Scenario,
+pol,Policy,
+ind,Indicator,
+base,Base,
+pa,Patriotic Agenda,
+tnd,Historical Tendency,
+dx,External Debt,
+dxdt,External Debt + Taxes,
+pov,Poverty,Wellbeing
+gdp,GDP,Wellbeing
+gini,Gini,Wellbeing
+edc,Education,HumanDevelopment
+u5m,Under-5 Mortality Rate,HumanDevelopment
+mtm,Maternity Mortality Rate,HumanDevelopment
+water,Water,HumanDevelopment
+sanit,Sanitation,HumanDevelopment
+emp-tot,Employment Total,Labor
+emp-spc,Employment Special,Labor
+emp-base,Employment Base,Labor
+emp-int,Employment Int,Labor
+une-tot,Unemployment Total,Labor
+une-spc,Unemployment Special,Labor
+une-base,Unemployment Base,Labor
+une-int,Unemployment Int,Labor
+wag-tot,Wages Total,Labor
+wag-spc,Wages Special,Labor
+wag-base,Wages Base,Labor
+wag-int,Wages Int,Labor

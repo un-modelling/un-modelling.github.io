@@ -1,0 +1,60 @@
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.modal {
+  font-size: 0.8em;
+}
+
+.graph-title {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: #4d4d4d !important;
+  text-transform: uppercase;
+  border-bottom: #00aeef solid 3px;
+  text-align: left;
+  padding-bottom: 0.3em;
+}
+
+#logo {
+  background: url('/images/un-logo.png') no-repeat center center;
+  width: 60px;
+}
+
+#title-bar {
+  padding: 0 10px;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+#title-bar input {
+  padding: 0 10px;
+  font-size: 44px;
+  line-height: 46px;
+  margin: 10px;
+  font-weight: 600;
+  font-family: Roboto;
+  width: 100%;
+  letter-spacing: -0.02em;
+  color: #4d4d4d;
+  text-transform: uppercase;
+  text-align: left;
+  border: none;
+}
+
+table {
+  font-size: 0.8em;
+  margin: auto;
+  width: 100%;
+}
+
+thead {
+  font-weight: bold;
+}

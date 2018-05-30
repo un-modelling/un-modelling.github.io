@@ -1,0 +1,29 @@
+variable,expanded,category
+Unmet_Demand_Household,Unmet demand In urban and rural households (10^5 cubic metres),Demand
+Unmet_Demand_Irrigation,Unmet demand In Water for Irrigation needs (10^5 cubic metres),Demand
+Total_Demand_Household,Total water demand in Households (10^5  cubic metres),Demand
+Total_Demand_Irrigation,Total water demand in Irrigation  (10^5  cubic metres),Demand
+Water_Use_Irrigation,Total water use for Irrigation  (10^5 cubic metres),Water
+Area_IRR_Maize,Area under irrigation for Maize (1000 Ha),Area
+Area_IRR_Sugarcane,Area under irrigation for Sugarcane (1000 Ha),Area
+Prod_IRR_Sugarcane,total production IRR sugar cane (1000 Tonnes),Output
+Prod_IRR_Maize,total production IRR Maize (1000 Tonnes),Output
+Yield_IRR_Sugarcane,Yield IRR Sugarcane (kg/Ha),Output
+Yield_IRR_Maize,Yield IRR Maize (kg/Ha),Output
+Area_Rainfed_Banana,Banana area under rainfed agriculture (1000 Ha),Area
+Area_Rainfed_Coffee,Coffee area under rainfed agriculture (1000 Ha),Area
+Prod_Rainfed_Banana,Total production; Banana; rainfed (1000 Tonnes),Output
+Prod_Rainfed_Coffee,Total production; Coffee; rainfed (1000 Tonnes),Output
+Yield_Rainfed_Banana,Yield Banana; Rainfed (kg/Ha),Output
+Yield_Rainfed_Coffee,Yield Coffee; Rainfed (kg/Ha),Output
+Sugar_IRR_Sugarcane,Potential Sugar production from IRR Sugarcane (Tonnes),Output
+BAGG_IRR_Sugarcane,Potential Bagasse production from IRR Sugarcane (Tonnes),Output
+demand,Demand,Demand
+REF,Reference,
+HIGH,High Demand,
+sw,SW,
+gw,GW,
+indicator,Indicator,
+climate,Climate,
+Area_IRR,Diff of Area Under Irrigation,Area
+_IRR_Sugarcane,Diff of production from IRR Sugarcane,Output

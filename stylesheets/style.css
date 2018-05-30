@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: local('EB Garamond Regular'), local('EBGaramond-Regular'), url(/lib/fonts/garamond.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(/lib/fonts/roboto.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(/lib/fonts/roboto-bold.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(/lib/fonts/roboto-light.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Garamond, Georgia, Optima, serif;
+  font-size: 18px;
+
+  padding: 0;
+  margin: 0;
+  color: #4b4c56;
+  background-color: white;
+}
+
+footer {
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p, ol, ul {
+  margin: 2em auto;
+  max-width: 1000px;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Roboto, sans-serif;
+}
+
+h1 {
+  letter-spacing: 0.03em;
+  margin: 0;
+  color: #4d4d4d !important;
+  text-transform: uppercase;
+  border-bottom: #00aeef solid 3px;
+  text-align: left;
+  padding-bottom: 0.3em;
+}
+
+section {
+  padding-left:  4em;
+  padding-right:  4em;
+
+  padding-bottom: 2em;
+  padding-top: 2em;
+
+  max-width: 60em;
+  margin: auto;
+}
+
+section.banner {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  color: white;
+  width: 100% !important;
+  max-width: unset;
+
+  z-index: 1;
+  font-weight: normal;
+}
+
+section.banner .banner-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+  padding: 1em;
+}
+
+.t-col {
+  flex: 0;
+  display: block;
+}
+
+.no-desktop {
+  display: none;
+}
+
+.fuzz {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile specifics */
+@media (max-width: 1000px) {
+  section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .no-mobile {
+    display: none !important;
+  }
+
+  .no-desktop {
+    display: block;
+  }
+
+  .banner {
+    display: none;
+  }
+}

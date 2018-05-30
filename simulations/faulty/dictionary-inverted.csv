@@ -1,0 +1,20 @@
+Desciption,Variable Name
+Unmet demand In urban and rural households (10^5 cubic metres),Unmet_Demand_Household
+Unmet demand In Water for Irrigation needs (10^5 cubic metres),Unmet_Demand_Irrigation
+Total water demand in Households (10^5  cubic metres),Total_ Demand_Household
+Total water demand in Irrigation  (10^5  cubic metres),Total_ Demand_Irrigation
+Total water use for Irrigation  (10^5 cubic metres),Water_Use_Irrigation
+Area under irrigation for Maize (1000 Ha),Area_IRR_Maize
+Area under irrigation for Sugarcane (1000 Ha),Area_IRR_Sugarcane
+total production IRR sugar cane (1000 Tonnes),Prod_IRR_Sugarcane
+total production IRR Maize (1000 Tonnes),Prod_IRR_Maize
+Yield IRR Sugarcane (kg/Ha),Yield_IRR_Sugarcane
+Yield IRR Maize (kg/Ha),Yield_IRR_Maize
+Banana area under rainfed agriculture (1000 Ha),Area_Rainfed_Banana
+Coffee area under rainfed agriculture (1000 Ha),Area_Rainfed_Coffee
+Total production;Banana; rainfed (1000 Tonnes),Prod_Rainfed_Banana
+Total production;coffee; rainfed (1000 Tonnes),Prod_Rainfed_Coffee
+Yield Banana ;Rainfed (kg/Ha),Yield_Rainfed_Banana
+Yield coffee ;Rainfed (kg/Ha),Yield_Rainfed_Coffee
+Potential Sugar production from IRR Sugarcane (Tonnes),Sugar_IRR_Sugarcane
+Potential Bagasse production from IRR Sugarcane (Tonnes),BAGG_IRR_Sugarcane

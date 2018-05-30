@@ -1,0 +1,15 @@
+variable,expanded
+ind,Indicator
+sim,Escenario
+Exports,Exportaciones
+FixInv,InversionFija
+GDPMP,PIB
+Imports,Importaciones
+PrvCon,Consumo_Privado
+f-lab-asal-tot,RemuneracionesT
+CO2_ems,Emisiones
+REXRX,Tipo Cambio Real
+base,Base
+TumPriv-Dext,Priv-DeudaExt
+TumPubDint,Pub-DeudaInt
+TumPubImp,Pub-Impuesto

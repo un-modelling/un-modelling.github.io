@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="640">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+    <title>UN Modelling Tools</title>
+  </head>
+
+  <body>
+    <header>
+  <a id="title" href="/">
+    Modelling&nbsp;Tools
+    <br>
+    <div id="for-sustainable-development">for&nbsp;sustainable&nbsp;development</div>
+  </a>
+
+  <div id="logos">
+    <a href="http://www.undp.org/">
+      <img src="/images/logos/undp.svg"
+           alt="UNDP Logo">
+    </a>
+    <a href="https://www.un.org/development/desa/en/">
+      <img src="/images/logos/undesa.png"
+           alt="UNDESA Logo">
+    </a>
+  </div>
+</header>
+
+
+    <nav>
+  <input id="toggle"
+         class="no-desktop"
+         type="checkbox">
+
+  <div class="no-desktop">
+    <label for="toggle">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+        <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </svg>
+    </label>
+  </div>
+
+  <a href="/about"
+     class="toggleable">About</a>
+
+  <a href="/modelling-tools"
+     class="toggleable">Modelling Tools</a>
+
+  <a href="/country-projects"
+     class="toggleable">Country Projects</a>
+
+  <a href="/outreach-training"
+     class="toggleable">Outreach Training</a>
+
+  <a href="/news-events"
+     class="toggleable">News and Events</a>
+
+  <script>
+    (function() {
+    var as = document.querySelectorAll('body > nav a');
+    var path = location.pathname;
+
+    for (var a of as) {
+      var regex = new RegExp(`${a.pathname}`);
+
+      if (!a.href.match('#') && path.match(regex)) {
+        a.classList.add('active');
+        break;
+      }
+    }})();
+  </script>
+</nav>
+
+
+    <main>
+<!-- CONTENT-STARTS -->
+<link rel="stylesheet" href="/stylesheets/country-project.css">
+
+<section>
+  <div class="title"><img src="/lib/flags/kyrgyz-republic.svg"><h1>Kyrgyz Republic</h1></div>
+
+  <p><strong>When: </strong> 2008-2011, 2015-present</p>
+
+  <p><strong>Which tools: </strong> MAMS </p>
+
+  <p><strong>Who’s involved: </strong> Government of the Kyrgyz Republic (Office of the President, Ministry of Economy) supported by UNDESA, UNDP and the Universidad de la Plata</p>
+
+  <p><strong>What's happening: </strong> Capacity development between 2008 and 2011 aided in using the MAMS economy-wide model to assess development strategies to achieve the MDGs. Following a request made by the Office of the President in 2015, technical assistance was provided to back preparation of the 2030 Strategy, a long-term national development plan. This has involved updating the MAMS model dataset and designing new policy scenarios for 2017 to 2030. Scenarios focus on the potential contributions of different drivers of economic growth, including investment in public infrastructure, productivity growth across sectors, foreign direct investment and remittances. They have demonstrated how potential vulnerabilities from world economic shocks (via decreased export prices and increased import prices of key exported and imported commodities, respectively) may affect growth paths.</p>
+</section>
+
+<!-- CONTENT-ENDS -->
+    </main>
+
+    <footer>
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+  </div>
+
+  <div class="t-col">
+    <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+  </div>
+
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+  </div>
+
+  <div class="t-col">
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+  </body>
+</html>

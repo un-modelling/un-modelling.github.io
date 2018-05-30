@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="640">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+    <title>UN Modelling Tools</title>
+  </head>
+
+  <body>
+    <header>
+  <a id="title" href="/">
+    Modelling&nbsp;Tools
+    <br>
+    <div id="for-sustainable-development">for&nbsp;sustainable&nbsp;development</div>
+  </a>
+
+  <div id="logos">
+    <a href="http://www.undp.org/">
+      <img src="/images/logos/undp.svg"
+           alt="UNDP Logo">
+    </a>
+    <a href="https://www.un.org/development/desa/en/">
+      <img src="/images/logos/undesa.png"
+           alt="UNDESA Logo">
+    </a>
+  </div>
+</header>
+
+
+    <nav>
+  <input id="toggle"
+         class="no-desktop"
+         type="checkbox">
+
+  <div class="no-desktop">
+    <label for="toggle">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+        <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </svg>
+    </label>
+  </div>
+
+  <a href="/about"
+     class="toggleable">About</a>
+
+  <a href="/modelling-tools"
+     class="toggleable">Modelling Tools</a>
+
+  <a href="/country-projects"
+     class="toggleable">Country Projects</a>
+
+  <a href="/outreach-training"
+     class="toggleable">Outreach Training</a>
+
+  <a href="/news-events"
+     class="toggleable">News and Events</a>
+
+  <script>
+    (function() {
+    var as = document.querySelectorAll('body > nav a');
+    var path = location.pathname;
+
+    for (var a of as) {
+      var regex = new RegExp(`${a.pathname}`);
+
+      if (!a.href.match('#') && path.match(regex)) {
+        a.classList.add('active');
+        break;
+      }
+    }})();
+  </script>
+</nav>
+
+
+    <main>
+<!-- CONTENT-STARTS -->
+<link rel="stylesheet" href="/stylesheets/index.css">
+
+<section class="banner"
+         style="background-image: url(/images/photos/haiti-coastline.jpg);">
+  <div class="section-header"
+       style="flex: unset;
+              font-family: Garamond, Georgia, Optima, monospace, serif;
+              background-color: rgba(255, 255, 255, 0.6);
+              color: #333;
+              margin: 3em auto;
+              padding: 1em 4em">
+    <p style="text-align: left;
+              font-size: 2em;">
+      Our commitment to the 2030&nbsp;Agenda<br>
+      for Sustainable Development
+    </p>
+  </div>
+</section>
+
+<section style="display: block !important;">
+  <!-- <h1>Our commitment to the 2030&nbsp;Agenda for Sustainable Development</h1> -->
+
+  <div style="font-size: 1.3em;">
+    <p>The 2030 Agenda for Sustainable Development represents a historic international commitment to improving human well-being and protecting our shared planet. It calls on each country to carefully balance economic, social and environmental priorities, and choose the right mix of public policy options.</p>
+    <p>To help policymakers meet this challenge, the United Nations Department of Economic and Social Affairs, the United Nations Development Programme and partners have created a suite of analytical modelling tools. These track the complex interactions of different dimensions of sustainable development. Countries are using these tools to move forward on core objectives such as achieving sustainable economic growth, tackling climate change and advancing social inclusion.</p>
+  </div>
+</section>
+
+<section class="banner"
+         style="background-image: url(/images/photos/secretariat-with-flags.jpg);">
+  <div class="section-header"
+       style="flex: unset;
+              font-family: Garamond, Georgia, Optima, monospace, serif;
+              background-color: rgba(255, 255, 255, 0.7);
+              color: #111;
+              margin: 3em auto;
+              padding: 1em 2em;">
+    <p style="text-align: left;
+              font-size: 1.7em;">
+      <span class="huge-open-quotes">&nbsp;</span>
+
+      <span style="font-family: monospace; font-size: 0.8em;">[...]</span> the United Nations shall promote:<br>
+      higher standards of living, <br>
+      full employment,<br>
+      and conditions of economic and social<br>
+      progress and development.
+
+      <span class="huge-close-quotes"></span>
+    </p>
+
+    <p style="text-align: right;">
+      - UN Charter, Art. 55a
+    </p>
+  </div>
+</section>
+
+<!-- CONTENT-ENDS -->
+    </main>
+
+    <footer>
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+  </div>
+
+  <div class="t-col">
+    <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+  </div>
+
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+  </div>
+
+  <div class="t-col">
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+  </body>
+</html>

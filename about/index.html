@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="640">
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/header.css">
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link rel="stylesheet" href="/stylesheets/main.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+
+    <title>UN Modelling Tools</title>
+  </head>
+
+  <body>
+    <header>
+  <a id="title" href="/">
+    Modelling&nbsp;Tools
+    <br>
+    <div id="for-sustainable-development">for&nbsp;sustainable&nbsp;development</div>
+  </a>
+
+  <div id="logos">
+    <a href="http://www.undp.org/">
+      <img src="/images/logos/undp.svg"
+           alt="UNDP Logo">
+    </a>
+    <a href="https://www.un.org/development/desa/en/">
+      <img src="/images/logos/undesa.png"
+           alt="UNDESA Logo">
+    </a>
+  </div>
+</header>
+
+
+    <nav>
+  <input id="toggle"
+         class="no-desktop"
+         type="checkbox">
+
+  <div class="no-desktop">
+    <label for="toggle">
+      <svg style="width:28px;height:28px" viewBox="0 0 24 18">
+        <path fill="white" d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+      </svg>
+    </label>
+  </div>
+
+  <a href="/about"
+     class="toggleable">About</a>
+
+  <a href="/modelling-tools"
+     class="toggleable">Modelling Tools</a>
+
+  <a href="/country-projects"
+     class="toggleable">Country Projects</a>
+
+  <a href="/outreach-training"
+     class="toggleable">Outreach Training</a>
+
+  <a href="/news-events"
+     class="toggleable">News and Events</a>
+
+  <script>
+    (function() {
+    var as = document.querySelectorAll('body > nav a');
+    var path = location.pathname;
+
+    for (var a of as) {
+      var regex = new RegExp(`${a.pathname}`);
+
+      if (!a.href.match('#') && path.match(regex)) {
+        a.classList.add('active');
+        break;
+      }
+    }})();
+  </script>
+</nav>
+
+
+    <main>
+<!-- CONTENT-STARTS -->
+<link rel="stylesheet" href="/stylesheets/about.css">
+
+<section class="banner"
+         style="background-image: url(/images/photos/un-window.jpg);
+                min-height: 500px;">
+</section>
+
+<section>
+  <h1>Background</h1>
+
+  <p>The 2030 Agenda’s integrated vision of development means that progress on any given issue depends on progress on many others.</p>
+
+  <p>Realizing the Agenda as well as the Paris Agreement on climate change requires careful management of complex links and trade-offs. Public policies need to balance diverse sectors, levels of government, and stakeholder interests over the short, medium and long term. Success depends in part on good planning and informed decision-making, which can be guided by modeling tools that provide insights and analysis.</p>
+
+  <p>The United Nations Department of Economic and Social Affairs (UNDESA) and the United Nations Development Programme (UNDP) have pioneered a series of modelling tools. Early initiatives included economy-wide modeling and microsimulation methodologies. More recently, energy systems modelling, geospatial energy-access modelling, and the integrated modelling of climate, land-use, water and energy have been developed.</p>
+</section>
+
+<section>
+  <h1>Responding to National Needs</h1>
+
+  <p>The tools are tailored to the unique circumstances and policy requirements of each country. Developing capacities to use them follows a “learning by doing” philosophy that brings together national teams and international experts.</p>
+
+  <p>Together, policymakers, UN staff, data and modelling experts:
+    <ol>
+      <li>Build and tailor models to national development contexts</li>
+      <li>Strengthen government capacities to apply modelling tools to inform decision-making</li>
+      <li>Comunicate findings to the highest levels of government to guide policies</li>
+    </ol>
+  </p>
+</section>
+
+<section>
+  <h1>Partnerships</h1>
+
+  <p>UNDESA and UNDP work with key research partners including: the Universidad de La Plata (Argentina), the Royal Institute of Technology in Sweden (KTH-dESA), the International Atomic Energy Agency (IAEA), the International Institute for Applied Systems Analysis (IIASA), the Stockholm Environment Institute (SEI-US), the International Centre for Theoretical Physics (ICTP-Italy), the Policy Centre (IPC IG, Brazil), the University of Cambridge (United Kingdom) and the British Colombia Institute of Technology (Canada)</p>
+
+  <div id="partners">
+    <div class="partner" onclick="window.location = 'https://www.un.org/development/desa/en/';">
+      <img src="/images/logos/undesa.png">
+      <h2>United Nations Department <br>Economical and Social Affairs</h2>
+    </div>
+
+    <div class="partner" onclick="window.location = 'https://www.undp.org/';">
+      <img src="/images/logos/undp.svg">
+      <h2>United Nations <br>Development&nbsp;Programme</h2>
+    </div>
+
+    <div class="partner" onclick="window.location = 'https://www.kth.se/en';">
+      <img src="/images/logos/kth.svg">
+      <h2>Royal Institute of Technology</h2>
+    </div>
+
+    <div class="partner" onclick="window.location = 'http://www.optimus.community/';">
+      <img src="/images/logos/optimus.png">
+      <h2>Optimus Community</h2>
+    </div>
+  </div>
+</section>
+
+
+<!--
+    !-- <section id="other-partners">
+    !--   <div class="section-header">
+    !--     <h1>Other Partners</h1>
+    !--     <p>
+    !--       Text about other partners
+    !--     </p>
+    !--   </div>
+    !--
+    !--   <div class="partner" >
+    !--     <img src="/images/logos/ictp.svg">
+    !--     <h2>ICTP</h2>
+    !--   </div>
+    !--
+    !--   <div class="partner" >
+    !--     <img src="/images/logos/ipc.png">
+    !--     <h2>IPC-Brazil</h2>
+    !--   </div>
+    !--
+    !--   <div class="partner" >
+    !--     <img src="/images/logos/cambridge.svg">
+    !--     <h2>University of Cambridge</h2>
+    !--   </div>
+    !--
+    !--   <div class="partner" >
+    !--     <img src="/images/logos/plata.jpg">
+    !--     <h2>Universidad de la Plata</h2>
+    !--   </div>
+    !--
+    !--   <div class="partner" >
+    !--     <img src="/images/logos/bcit.png">
+    !--     <h2>British Columbia Institute of Technology</h2>
+    !--   </div>
+    !-- </section>
+  -->
+
+<!-- CONTENT-ENDS -->
+    </main>
+
+    <footer>
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/copyright">Copyright</a>
+  </div>
+
+  <div class="t-col">
+    <a href="https://www.un.org/en/sections/about-website/terms-use">Terms of Use</a>
+  </div>
+
+  <div class="t-col">
+    <a href="http://www.un.org/en/sections/about-website/privacy-notice">Privacy Notice</a>
+  </div>
+
+  <div class="t-col">
+    <a href="/contact">Contact</a>
+  </div>
+</footer>
+
+  </body>
+</html>

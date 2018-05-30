@@ -1,0 +1,23 @@
+variable,expanded
+ind,Indicator
+scn,Scenario
+cnt,Country
+gdp,GDP
+base,Base
+bdg.exp,Budget Expansion
+infr,Infrstructure
+edu.1,Primary Education
+edu.3,Ternary Education
+edu.all,Education all
+save,Savings/Debt
+edu,Primary Education Completion
+water,Drinking Water
+sanit,Basic Sanitation
+mr.u5,Under-5 Mortality
+mr.mat,Maternal Mortality
+bol,Bolivia
+cri,Costa Rica
+uga,Uganda
+country,Countries
+indicator,Indicators
+scenario,Policy Scenarios

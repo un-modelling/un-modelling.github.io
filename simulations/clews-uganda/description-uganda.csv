@@ -1,0 +1,55 @@
+Scenario Name,Description
+REF_SW100_GW100_HC,Reference Demand. No restriction on SW and GW withdrawals under Historic Climate
+REF_SW100_GW60_HC,Reference Demand. No restriction on SW withdrawals. GW usage restricted to 60% of the sustainable withdrawal levels under Historic Climate
+REF_SW100_GW20_HC,Reference Demand. No restriction on SW withdrawals. GW usage restricted to 20% of the sustainable withdrawal levels under Historic Climate
+REF_SW60_GW100_HC,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. No restrictions on GW withdrawals under Historic Climate
+REF_SW60_GW60_HC,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under Historic Climate
+REF_SW60_GW20_HC,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under Historic Climate
+REF_SW20_GW100_HC,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. No restrictions on GW withdrawals under Historic Climate
+REF_SW20_GW60_HC,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under Historic Climate
+REF_SW20_GW20_HC,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under Historic Climate
+SDG6_SW100_GW100_HC,High Demand (SDG6). No restriction on SW and GW withdrawals under Historic Climate
+SDG6_SW100_GW60_HC,High Demand (SDG6). No restriction on SW withdrawals. GW usage restricted to 60% of the sustainable withdrawal levels under Historic Climate
+SDG6_SW100_GW20_HC,High Demand (SDG6). No restriction on SW withdrawals. GW usage restricted to 20% of the sustainable withdrawal levels under Historic Climate
+SDG6_SW60_GW100_HC,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. No restrictions on GW withdrawals under Historic Climate
+SDG6_SW60_GW60_HC,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under Historic Climate
+SDG6_SW60_GW20_HC,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under Historic Climate
+SDG6_SW20_GW100_HC,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. No restrictions on GW withdrawals under Historic Climate
+SDG6_SW20_GW60_HC,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under Historic Climate
+SDG6_SW20_GW20_HC,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under Historic Climate
+REF_SW100_GW100_CC45,Reference Demand. No restriction on SW and GW withdrawals under RCP45 Climate
+REF_SW100_GW60_CC45,Reference Demand. No restriction on SW withdrawals. GW usage restricted to 60% of the sustainable withdrawal levels under RCP45 Climate
+REF_SW100_GW20_CC45,Reference Demand. No restriction on SW withdrawals. GW usage restricted to 20% of the sustainable withdrawal levels under RCP45 Climate
+REF_SW60_GW100_CC45,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. No restrictions on GW withdrawals under RCP45 Climate
+REF_SW60_GW60_CC45,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under RCP45 Climate
+REF_SW60_GW20_CC45,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under RCP45 Climate
+REF_SW20_GW100_CC45,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. No restrictions on GW withdrawals under RCP45 Climate
+REF_SW20_GW60_CC45,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under RCP45 Climate
+REF_SW20_GW20_CC45,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under RCP45 Climate
+SDG6_SW100_GW100_CC45,High Demand (SDG6). No restriction on SW and GW withdrawals under RCP45 Climate
+SDG6_SW100_GW60_CC45,High Demand (SDG6). No restriction on SW withdrawals. GW usage restricted to 60% of the sustainable withdrawal levels under RCP45 Climate
+SDG6_SW100_GW20_CC45,High Demand (SDG6). No restriction on SW withdrawals. GW usage restricted to 20% of the sustainable withdrawal levels under RCP45 Climate
+SDG6_SW60_GW100_CC45,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. No restrictions on GW withdrawals under RCP45 Climate
+SDG6_SW60_GW60_CC45,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under RCP45 Climate
+SDG6_SW60_GW20_CC45,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under RCP45 Climate
+SDG6_SW20_GW100_CC45,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. No restrictions on GW withdrawals under RCP45 Climate
+SDG6_SW20_GW60_CC45,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under RCP45 Climate
+SDG6_SW20_GW20_CC45,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under RCP45 Climate
+REF_SW100_GW100_CC85,Reference Demand. No restriction on SW and GW withdrawals under RCP85 Climate
+REF_SW100_GW60_CC85,Reference Demand. No restriction on SW withdrawals. GW usage restricted to 60% of the sustainable withdrawal levels under RCP85 Climate
+REF_SW100_GW20_CC85,Reference Demand. No restriction on SW withdrawals. GW usage restricted to 20% of the sustainable withdrawal levels under RCP85 Climate
+REF_SW60_GW100_CC85,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. No restrictions on GW withdrawals under RCP85 Climate
+REF_SW60_GW60_CC85,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under RCP85 Climate
+REF_SW60_GW20_CC85,Reference Demand. SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under RCP85 Climate
+REF_SW20_GW100_CC85,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. No restrictions on GW withdrawals under RCP85 Climate
+REF_SW20_GW60_CC85,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under RCP85 Climate
+REF_SW20_GW20_CC85,Reference Demand. SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under RCP85 Climate
+SDG6_SW100_GW100_CC85,High Demand (SDG6). No restriction on SW and GW withdrawals under RCP85 Climate
+SDG6_SW100_GW60_CC85,High Demand (SDG6). No restriction on SW withdrawals. GW usage restricted to 60% of the sustainable withdrawal levels under RCP85 Climate
+SDG6_SW100_GW20_CC85,High Demand (SDG6). No restriction on SW withdrawals. GW usage restricted to 20% of the sustainable withdrawal levels under RCP85 Climate
+SDG6_SW60_GW100_CC85,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. No restrictions on GW withdrawals under RCP85 Climate
+SDG6_SW60_GW60_CC85,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under RCP85 Climate
+SDG6_SW60_GW20_CC85,High Demand (SDG6). SW can maximum satisfy only 60% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under RCP85 Climate
+SDG6_SW20_GW100_CC85,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. No restrictions on GW withdrawals under RCP85 Climate
+SDG6_SW20_GW60_CC85,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 60% of the sustainable withdrawal levels under RCP85 Climate
+SDG6_SW20_GW20_CC85,High Demand (SDG6). SW can maximum satisfy only 20% of the domestic demand. GW usage restricted to 20% of the sustainable withdrawal levels under RCP85 Climate

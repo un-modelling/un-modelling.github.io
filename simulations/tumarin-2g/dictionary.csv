@@ -1,0 +1,30 @@
+variable,expanded
+ind,Indicator
+sim,Escenario
+Absorption,Absorcion
+Exports,Exportaciones
+FixInv,InversionF
+GDPFC,PIB.pfc
+GDPMP,PIB.pmk
+GovCon,Consumo_Gobierno
+GovFixInv,InvFija_Gob
+GovFixInvInfra,InvInfrast_Gob
+Imports,Importaciones
+NetIndTax,Impuestos.Indirectos_Netos
+PrvCon,Consumo_Privado
+PrvFixInv,InvFija_Privada
+StockChange,Capital.Acervo.Cambio
+Gov-DomDebt-GDPshr,DeudaInterna_Gob_%pib
+Gov-ForDebt-GDPshr,DeudaExterna_Gob_%pib
+NonGov-ForDebt-GDPshr,DeudaExterna_NoGob_%pib
+Gov-DomDebt,DeudaInterna_Gob
+Gov-ForDebt,DeudaExterna_Gob
+NonGov-ForDebt,DeudaExterna_NoGob
+f-lab-asal-tot,Remuneraciones Trabajo
+CO2_ems,Emisiones.CO2.TOT
+base,Base_Referencia
+TumPriv-Dext,Fin-Deuda_Ext_Privada
+TumPubDint,Fin-Deuda_Int_Publica
+TumPubImp,Fin-Impuesto_Directo
+Electricity-totalvdelec,Val-Agreg.Electricity
+REXRX,Tipo Cambio Real

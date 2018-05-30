@@ -1,0 +1,37 @@
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: #333333;
+  font-size: 1em;
+  clear: both;
+  width: 100%;
+  padding: 1em;
+}
+
+footer .t-col {
+  flex: 1;
+  text-align: center;
+}
+
+footer a {
+  display: block;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  color: white;
+}
+
+footer a:hover {
+  color: #aaaaaa;
+}
+
+@media (max-width: 1000px) {
+  footer {
+    display: block;
+    height: auto;
+  }
+
+  footer .t-col {
+    height: 3em;
+  }
+}

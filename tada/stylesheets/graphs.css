@@ -1,0 +1,160 @@
+#panes-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#panes-container > div {
+  flex: 1;
+}
+
+.svgs-container {
+  text-align: center;
+}
+
+.graph-object {
+  display: inline-flex;
+  flex-flow: row wrap;
+
+  background-color: white;
+  margin: 1em;
+  padding: 0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  max-width: 550px;
+  text-align: center;
+}
+
+.graph-object > .graph-title {
+  flex: 1 100%;
+  margin: 12px 20px;
+}
+
+.graph-object > svg {
+  display: block;
+
+  width: 500px;
+  margin: 10px auto;
+}
+
+#panes-container table {
+  text-align: left;
+  font-family: monospace;
+}
+
+#reference-column,
+#alternative-column {
+  text-align: center;
+  flex: 1 50%;
+}
+
+#alternative-column {
+  border-left: 1px solid lightgray;
+}
+
+.graph-title {
+  fill-opacity: 0.6;
+}
+
+.area {
+  stroke: none;
+  fill-opacity: 0.8;
+}
+
+.clip {
+  fill-opacity: 0.5;
+}
+
+.line {
+  fill: none;
+}
+
+.line-marker,
+.area-diff-marker,
+.bar-stacked-marker,
+.area-stacked-marker {
+  stroke: red;
+  stroke-linecap: round;
+  fill: none;
+  pointer-events: none;
+}
+
+.line-pointer,
+.area-diff-pointer,
+.bar-stacked-pointer,
+.area-stacked-pointer {
+  position: absolute;
+  font-size: x-small;
+
+  opacity:  0.8;
+  background-color: white;
+
+  pointer-events: none;
+  z-index: 1;
+}
+
+.axis, .tick {
+  pointer-events: none;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: lightgrey;
+  stroke-opacity: 1;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font-family: Roboto, monospace;
+  font-size: 11px;
+  fill: grey;
+}
+
+.axis.grid path {
+  stroke: none;
+}
+
+.axis.grid line {
+  stroke: #f5f5f5;
+}
+
+.controls-toggler {
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.controls-toggler:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.controls-toggler:hover .controls {
+  display: flex;
+}
+
+.controls {
+  display: none;
+  flex-direction: column;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+
+  width: 32px;
+  color: white;
+  font-size: 1.5em;
+
+  margin-left: 2px;
+}
+
+.controls div {
+  cursor: pointer;
+  padding: 4px 0 0 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.controls div:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.color_td {
+  width: 2em;
+  height: 2em;
+  /* background-color: red; */
+}

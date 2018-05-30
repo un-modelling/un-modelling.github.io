@@ -1,0 +1,40 @@
+main {
+  margin: auto;
+  padding: 0;
+  background-color: white;
+}
+
+main nav {
+  background-color: white;
+  text-transform: uppercase;
+
+  position: sticky;
+  position: -webkit-sticky;
+  top: 3em;
+
+  height: 3em;
+  line-height: 3em;
+  z-index: 9;
+
+  border-bottom: 1px solid #eee;
+}
+
+main nav a {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 0em;
+}
+
+main nav a:hover {
+  color: #888;
+}
+
+@media (max-width: 1000px) {
+  main {
+    width: 100%;
+  }
+
+  main nav {
+    width: 100%;
+  }
+}

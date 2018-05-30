@@ -1,0 +1,42 @@
+#flags {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flag {
+  font-family: Roboto, sans-serif;
+  flex: 1 calc(33% - 2em);
+  border: 1px solid rgb(0,0,0,0);
+  color: #424242;
+
+  align-self: flex-end;
+
+  text-align: center;
+  padding: 2em;
+  position: relative;
+}
+
+.flag img {
+  margin: auto;
+  height: 130px;
+  display: block;
+  margin-bottom: 1em;
+}
+
+#countries .t-col:hover {
+  border: 1px solid lightgray;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 1000px) {
+  .flag {
+    flex: 1 auto;
+    max-width: 50%;
+  }
+
+  .flag img {
+    flex: 1 auto;
+    height: auto;
+    width: 100%;
+  }
+}

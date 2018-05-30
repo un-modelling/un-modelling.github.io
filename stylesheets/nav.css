@@ -1,0 +1,77 @@
+nav {
+  font-family: Roboto, sans-serif;
+
+  display: flex;
+  /* background-color: #333333; */
+  background-color: #00ADEF;
+
+  height: 3em;
+  line-height: 3em;
+
+  width: 100%;
+  clear: both;
+
+  padding: 0 2em;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  display: block;
+  flex: 1;
+
+  white-space: nowrap;
+
+  text-align: center;
+  margin: 0;
+
+  font-weight: bold;
+  font-size: 14px;
+
+  text-transform: uppercase;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+
+  color: white;
+}
+
+nav a:hover {
+  color: #ddd;
+}
+
+nav a.active {
+  background-color: #00A5E4;
+}
+
+nav #toggle {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  body > nav {
+    display: block;
+    height: auto;
+    min-height: 3.1em;
+    padding: 0;
+  }
+
+  body > nav label[for="toggle"] {
+    position: absolute;
+    top: 0;
+    right: 0.5em;
+
+    font-weight: bold;
+    font-size: 2em;
+
+    color: #f1f1f1;
+    cursor: pointer;
+  }
+
+  body > nav #toggle:not(:checked) ~ .toggleable {
+    position: absolute;
+    top: -1000px !important;
+    display: none;
+    clear: both;
+  }
+}
