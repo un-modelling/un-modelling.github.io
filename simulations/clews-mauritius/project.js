@@ -16,12 +16,12 @@ window.project_settings = {
 
   "eth": {
     "unique": true,
-    "preselect": [50]
+    "preselect": ["p50"]
   },
 
   "rps": {
     "unique": true,
-    "preselect": [50]
+    "preselect": ["p50"]
   },
 
   "climate": {
@@ -49,6 +49,8 @@ window.project_callback = (scope, sources, selection) => {
   ui_clear_graphs('reference', 'area-stacked');
   var eid = 'electricity_generation';
 
+  var elect_regex = /^electricity_(?!renewables|price)/;
+
   if (selection_graphs_list().includes(eid)) {
     var rg = area_stacked_draw({
       id: eid,
@@ -57,7 +59,7 @@ window.project_callback = (scope, sources, selection) => {
       domain: tada.data.domain,
       x: 'time',
       y: 'value',
-      sources: rs.results.filter((e) => e.query[tada.f(null)].match(/^electricity_/)),
+      sources: rs.results.filter((e) => e.query[tada.f(null)].match(elect_regex)),
       colors: d3.schemeCategory10,
     });
 
@@ -71,7 +73,7 @@ window.project_callback = (scope, sources, selection) => {
       domain: tada.data.domain,
       x: 'time',
       y: 'value',
-      sources: as.results.filter((e) => e.query[tada.f(null)].match(/^electricity_/)),
+      sources: as.results.filter((e) => e.query[tada.f(null)].match(elect_regex)),
       colors: d3.schemeCategory10,
     });
 
@@ -86,7 +88,7 @@ window.project_callback = (scope, sources, selection) => {
     var both = ref.map((x,i) => ref[i].concat(alt[i]).unique());
 
     var b = tada.f(...both).results
-      .filter((i) => i.id.match(/^electricity_/));
+      .filter((i) => i.id.match(elect_regex));
 
     var sg = bar_stacked_diff_draw({
       id: sid,
@@ -141,7 +143,7 @@ window.project_callback = (scope, sources, selection) => {
     p.forEach((s,i) => {
       var t = ps[i];
       var v = c.querySelector(`td[bind="${ss[j]}-${t}"]`);
-      if (v) v.innerText = s[0];
+      if (v) v.innerHTML = tada.dict[s[0]];
     });
   });
 };
@@ -193,5 +195,5 @@ margin: 1em auto;`;
   document.querySelector('#alternative-column').remove();
   document.querySelector('#sidebar li:nth-of-type(3)').remove();
 
-  _checkbox_set(document.querySelector('input#rps-reference-20'), true);
+  _checkbox_set(document.querySelector('input#rps-reference-p20'), true);
 };

@@ -5,10 +5,13 @@ eth,Renewable Ethanol,Energy
 rps,Renewable Electricity,Electricity
 climate,Rainfall,Other
 Cummulative (2015-2030),garbage,Energy
-Base,Base,
+base,Base,
+p20,&nbsp;20%,
+p35,&nbsp;35%,
+p50,&nbsp;50%,
 CC0,Historical Average,Other
-CC1,7% reduction,Other
-CC2,10% reduction,Other
+CC1,&nbsp;7% reduction,Other
+CC2,&nbsp;10% reduction,Other
 electricity_liquid,Electricity Liquid,Electricity
 sugar,Sugar production [Thousand tonnes],Other
 yield,Yield [Tonnes cane per hectare],Other
