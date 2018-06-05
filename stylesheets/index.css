@@ -2,7 +2,7 @@ section {
   display: flex;
 }
 
-section h1 {
+h1 {
   flex: 1 100%;
   font-size: 2.25rem;
 
@@ -43,4 +43,11 @@ section h1 {
   height: 4.5rem;
   float: right;
   content: '\201D';
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-size: 9vw;
+    margin: unset;
+  }
 }
