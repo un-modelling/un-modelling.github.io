@@ -48,7 +48,7 @@ function bar_stacked_diff_draw(o) {
 
   var lengths = data.map((x) => x.length);
 
-  if (lengths.unique().length !== 1 || lengths.first() !== 2) {
+  if (lengths.unique().length !== 1) {
     graph_sources_message(svg, 'bar-stacked-graph',
                           [(tada.dict[o.id] || o.id),
                            'This kind of graph needs exactly 2 comparable sources.']);
