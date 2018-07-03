@@ -82,7 +82,7 @@
 .bar-stacked-pointer,
 .area-stacked-pointer {
   position: absolute;
-  font-size: x-small;
+  font-size: 0.65em;
 
   opacity:  0.8;
   background-color: white;
