@@ -7,7 +7,8 @@
 
 .partner {
   padding: 1em;
-  flex: 1 calc(50% - 2em);
+  flex: 1;
+  max-width: calc(50% - 2em);
   border: 1px solid rgb(0,0,0,0);
   cursor: pointer;
 
