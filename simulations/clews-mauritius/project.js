@@ -16,17 +16,17 @@ window.project_settings = {
 
   "eth": {
     "unique": true,
-    "preselect": ["p50"]
+    "preselect": ["base"]
   },
 
   "rps": {
     "unique": true,
-    "preselect": ["p50"]
+    "preselect": ["base"]
   },
 
   "climate": {
     "unique": true,
-    "preselect": ["CC2"]
+    "preselect": ["CC0"]
   },
 };
 
@@ -195,5 +195,5 @@ margin: 1em auto;`;
   document.querySelector('#alternative-column').remove();
   document.querySelector('#sidebar li:nth-of-type(3)').remove();
 
-  _checkbox_set(document.querySelector('input#rps-reference-p20'), true);
+  _checkbox_set(document.querySelector('input#rps-reference-p35'), true);
 };
