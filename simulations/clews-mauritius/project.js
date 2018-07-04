@@ -90,6 +90,9 @@ window.project_callback = (scope, sources, selection) => {
     var b = tada.f(...both).results
       .filter((i) => i.id.match(elect_regex));
 
+    var even = (b.map(x => x.id).unique().length === (b.length / 2));
+
+    if (even) {
     var sg = bar_stacked_diff_draw({
       id: sid,
       scope: 'reference',
@@ -104,6 +107,7 @@ window.project_callback = (scope, sources, selection) => {
     if (sg) {
       graph_set_title(sg.container, (tada.dict[sid] || sid));
       graph_add_controls(sg.id, sg.container, sources);
+    }
     }
   }
 
