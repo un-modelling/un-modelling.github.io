@@ -85,12 +85,16 @@ window.project_callback = (scope, sources, selection) => {
   var sid = 'electricity_generation_diff';
 
   if (selection_graphs_list().includes(sid)) {
-    var both = ref.map((x,i) => ref[i].concat(alt[i]).unique());
-
-    var b = tada.f(...both).results
+    var a = tada.f(...ref).results
       .filter((i) => i.id.match(elect_regex));
 
-    var even = (b.map(x => x.id).unique().length === (b.length / 2));
+    var b = tada.f(...alt).results
+      .filter((i) => i.id.match(elect_regex));
+
+    var ab = a.concat(b);
+
+    var k = ab.map(x => x.id).unique().length
+    var even = (k === (ab.length / 2));
 
     if (even) {
     var sg = bar_stacked_diff_draw({
@@ -99,7 +103,7 @@ window.project_callback = (scope, sources, selection) => {
       container: '#reference-svgs',
       domain: tada.data.domain,
       range: [-3000, 3000],
-      sources: b,
+      sources: ab,
       colors: d3.schemeCategory10,
       x_tick: (d,i) => ((i%2) ? d3.timeFormat('%Y')(d) : ''),
     });
